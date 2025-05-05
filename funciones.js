@@ -3,9 +3,19 @@ function init(){
     productos=productos.innerHTML=
     `<div> 
         <label> ProductoA </label> 
-        <input min="1" type="number" name="" id=""> 
-        <button class="btn btn-primary" type = "button">Agregar</button>
-
+        <input min="1" type="number" name="" id="cantidad"> 
+        <button class="btn btn-primary" type = "button" onclick="Carrito()">Agregar</button>
     </div> `;
 
 }
+function Carrito(){
+    var card= document.getElementById("card");
+    let cantidad = document.getElementById("cantidad").value;
+    card.innerHTML=
+    `<div>
+        <h6> Cantidad:${cantidad} </h6>
+    
+    </div>
+       `
+       alert("Producto agregado al carrito")
+} 
